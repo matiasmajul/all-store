@@ -1,0 +1,66 @@
+.detail{
+    margin: 0 auto;
+    height: 90vh;
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+  
+}
+
+.detail img{
+    width: 40%;
+    height: 100%;
+    object-fit:contain;
+    transform: scale(1,1);
+    transition:500ms;
+}
+
+
+
+.description{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+.description h3{
+    font-size: 1rem;
+    color: var(--black);
+
+}
+
+.description p{
+    font-size: .7rem;
+    color: rgb(65, 65, 65);
+
+}
+
+.description span{
+    font-size: 1.2rem;
+    color:var(--black);
+}
+.descriptionText{
+    height:200px;
+    overflow:hidden;
+    margin: 1rem 0;
+    color: rgb(133, 133, 133) !important;
+    align-items: flex-start;
+}
+.btnComprar{
+    margin: 1rem 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--violet);
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnComprar span{
+    color: var(--white);
+}

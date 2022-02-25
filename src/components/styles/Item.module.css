@@ -1,0 +1,49 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 250px;
+    height: 350px;
+}
+
+.item>img
+{
+    width: 250px;
+    height: 250px;
+    object-fit:scale-down;
+    transform: scale(1, 1);
+    transition: 1000ms;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.item>img:hover{
+    transform: scale(1.1,1.1);
+    transition: 500ms;
+
+}
+
+.title{
+    margin-top: 1rem;
+    width: 60%;
+    height: 40px;
+    font-size: .8rem;
+    overflow: hidden;
+    color:var(--grey);
+}
+
+.item>p{
+    font-size: 1rem;
+    color: var(--black);
+    padding: .4rem 0;
+}
+
+.descuento{
+    position: absolute;
+    top:10px;
+    right: 10px ;
+    color:var(--violet);
+    font-weight: 500;
+    z-index: 1;
+}
+

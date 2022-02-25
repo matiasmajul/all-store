@@ -1,0 +1,68 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&family=Rubik:wght@300;400;500&display=swap');
+:root{
+    --green:#8CB369;
+    --yellow:#F4E285;
+    --orange:#F4A259;
+    --blue:#5B8E7D;
+    --red:#BC4B51;
+    --grey:#485853;
+    --grey-light:#96bbaf;
+    --white: #fff;
+    --black: #000;
+    --gray:#1F2937;
+    --violet:#6366F1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+
+}
+a,span,img{
+  user-select:none;
+
+}
+
+img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.cargando{
+    width: 300px;
+    height: 300px;
+    background-color: var(--red);
+}
+.preloader {
+    margin: 5rem auto;
+    width: 50px;
+    height: 50px;
+    border: 10px solid #eee;
+    border-top: 10px solid #666;
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+  }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

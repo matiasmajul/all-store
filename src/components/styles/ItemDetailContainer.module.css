@@ -1,0 +1,19 @@
+.empty {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.empty > p {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--violet);
+}
+.empty .back {
+  height: 30px;
+  text-decoration: underline;
+  margin: 1rem 0;
+}

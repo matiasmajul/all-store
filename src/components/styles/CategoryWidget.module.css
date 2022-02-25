@@ -1,0 +1,27 @@
+.content{
+    width: 10vw;
+}
+
+.contentList{
+    width: auto;
+    padding: 1rem;
+    list-style-type: none;
+    top:9vh;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content:space-around;
+    gap:1rem;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0 rgb(61, 61, 61);
+    z-index: 2;
+}
+
+.contentList li, .contentList a{
+    color:#858585;
+}
+.show{
+    display: flex;
+}
