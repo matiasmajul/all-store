@@ -41,7 +41,9 @@ Plataforma móvil creada por Google, para desarrollar y faciltiar la creacción 
 $ npm install firebase
 ```
 
+## PUBLICACION
 
+Guia para publicar proyecto con [Github Pages](https://platzi.com/tutoriales/1548-react/4065-guia-para-usar-github-pages-en-tus-proyectos-de-reactjs/).
 
 ## TODO
 
