@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { Link, useHistory  } from 'react-router-dom'
+import { Link, useNavigate   } from 'react-router-dom'
 import { userContext } from './UserContext'
 import style from './styles/Login.module.css'
 
@@ -10,7 +10,7 @@ export const Login = () => {
     password: ''
   })
   const { login, isLogin } = useContext(userContext);
-  let history = useHistory();
+  let navigate = useNavigate ();
 
   const handleForm = (event) => {
     event.preventDefault()
@@ -22,7 +22,7 @@ export const Login = () => {
   }
 
   useEffect(()=>{
-    if(isLogin())history.push('/')
+    if(isLogin())navigate('/')
 
   },)
 
@@ -41,7 +41,7 @@ export const Login = () => {
         </label>
 
         <input className={style.button} type='submit' value="Ingresar" />
-        <Link to={'/create'}>Crear cuenta</Link>
+        <Link to='/create'>Crear cuenta</Link>
     </form>
   )
 }

@@ -38,7 +38,7 @@ export const CartWidget = () => {
                     ))
                     }
                     <Link className={styles.btnCart}
-                        to={'/cart'}
+                        to='/cart'
                         onClick={() => setVisible(!visible)}>
                         Terminar mi compra
                     </Link>

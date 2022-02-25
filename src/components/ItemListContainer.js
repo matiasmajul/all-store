@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { ItemList } from "./ItemList"
-import styles from './styles/ItemListContainer.module.css';
+import './styles/ItemListContainer.module.css';
 
 // FIRESTORE IMPORT
 import { collection, getDocs} from "firebase/firestore";

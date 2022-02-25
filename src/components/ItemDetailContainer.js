@@ -49,7 +49,7 @@ export const ItemDetailContainer = () => {
                     <p>
                         No existe el producto
                     </p>
-                    <Link to={'/'} className={styles.back}>Regresar al menu principal</Link>
+                    <Link to='/' className={styles.back}>Regresar al menu principal</Link>
                 </div>
             )
 

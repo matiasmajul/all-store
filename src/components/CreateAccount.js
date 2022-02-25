@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Swal from 'sweetalert2'
 
@@ -16,7 +16,7 @@ export const CreateAccount = () => {
     password: ''
   })
   const [isSubmitDisable, setIsSubmitDisable] = useState(true)
-  let history = useHistory();
+  let navigate = useNavigate();
 
   const handleChangeUser = ({ name, value }) => {
     setUser({ ...user, [name]: value })
@@ -35,7 +35,7 @@ export const CreateAccount = () => {
       showConfirmButton: false,
       timer: 1000
     })
-    history.push('/login')
+    navigate('/login')
   }
   
   useEffect(() => {

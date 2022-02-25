@@ -24,7 +24,7 @@ export const ItemDetail = (product) => {
                 {
                     show ?
                         <ItemCount initial={1} stock={product.stock} onAdd={handleAdd} /> :
-                        <Link to={`/cart`} className={styles.btnComprar}>
+                        <Link to='/cart 'className={styles.btnComprar}>
                             <span>Ir al carrito</span>
                         </Link>
                 }

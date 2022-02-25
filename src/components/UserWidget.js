@@ -31,8 +31,8 @@ export const UserWidget = () => {
          ( <div className={styles.sesion} onClick={() => setVisible(!visible)} >
             <FontAwesomeIcon className={styles.icon} icon={faUser}></FontAwesomeIcon>
             <ul className={`${styles.contentList} ${visible ? styles.show : null}`} onMouseLeave={() => setVisible(!visible)}>
-              <li><Link to={'/login'}>Ingresar</Link></li>
-              <li><Link to={'/create'}>Crear cuenta</Link></li>
+              <li><Link to='/login'>Ingresar</Link></li>
+              <li><Link to='/create'>Crear cuenta</Link></li>
             </ul>
           </div>)
           

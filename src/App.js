@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer';
 import { ItemListCategory } from './components/ItemListCategory';
@@ -17,32 +17,18 @@ const App = () => {
   return (
     <UserProvider>
       <CartProvider >
-        <Router basename="/tech-store">
+        <BrowserRouter>
           <NavBar />
-          <Switch>
-            <Route path="/cart">
-              <Cart />
-            </Route>
-            <Route path='/create'>
-              <CreateAccount />
-            </Route>
-            <Route path='/login'>
-              <Login />
-            </Route>
-            <Route path="/item/:productId" >
-              <ItemDetailContainer />
-            </Route>
-            <Route path="/:categoryId">
-              <ItemListCategory />
-            </Route>
-            <Route exact path="/" >
-              <ItemListContainer greeting="Bienvenidos a All Store" />
-            </Route>
-            <Route path="*" >
-              <p>No encontrado</p>
-            </Route>
-          </Switch>
-        </Router>
+          <Routes>
+            <Route path="/cart" element={<Cart />}/>     
+            <Route path='/create' element={ <CreateAccount />}/>           
+            <Route path='/login' element={<Login />}/>
+            <Route path="/item/:productId" element={<ItemDetailContainer />}/>
+            <Route path="/:categoryId" element={<ItemListCategory/>}/>
+            <Route path="/"  element={<ItemListContainer greeting="Bienvenidos a All Store" />}/>
+            <Route path="*" element={<p>No encontrado</p>}/>
+          </Routes>
+        </BrowserRouter>
       </CartProvider>
     </UserProvider>
   )

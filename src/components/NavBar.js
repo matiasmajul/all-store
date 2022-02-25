@@ -13,7 +13,7 @@ export const NavBar = () => {
  
     return (
         <nav className={styles.navBar}>
-            <Link to={`/`} className={styles.icon}>
+            <Link to="/" className={styles.icon}>
                 <FontAwesomeIcon   icon={faAtlassian} />
             </Link>
             <CategoryWidget />
