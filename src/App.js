@@ -17,7 +17,7 @@ const App = () => {
   return (
     <UserProvider>
       <CartProvider >
-        <BrowserRouter>
+        <BrowserRouter basename={'/all-store'}>
           <NavBar />
           <Routes>
             <Route path="/cart" element={<Cart />}/>     
