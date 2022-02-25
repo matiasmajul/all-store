@@ -12,21 +12,15 @@ export const CategoryWidget = () => {
 
     useEffect(() => {
         const getCategories = async () => {
-            try {
-                const { docs } = await getDocs(collection(db, "categories"));
-                const category = docs.map((doc) => {
-                    return {
-                        id: doc.id,
-                        key: doc.data().key,
-                        name: doc.data().name
-                    }
-                })
-                setCategories(category)
-
-            }
-            catch (error) {
-                console.log(error.message)
-            }
+            const { docs } = await getDocs(collection(db, "categories"));
+            const category = docs.map((doc) => {
+                return {
+                    id: doc.id,
+                    key: doc.data().key,
+                    name: doc.data().name
+                }
+            })
+            setCategories(category)
         }
         getCategories()
     }, [])
@@ -37,7 +31,9 @@ export const CategoryWidget = () => {
             <div className={`${styles.contentList} ${visible ? styles.show : null}`}
                 onMouseLeave={() => setVisible(!visible)}>
                 {categories.map((category) =>
-                (<Link to={`/${category.name}`} key={category.key}>{category.name}</Link>
+                (<Link to={`/${category.name}`} key={category.key}>
+                    {category.name}
+                </Link>
                 ))}
             </div>
         </div>

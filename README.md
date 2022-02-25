@@ -45,9 +45,9 @@ $ npm install firebase
 
 Guia para publicar proyecto con [Github Pages](https://platzi.com/tutoriales/1548-react/4065-guia-para-usar-github-pages-en-tus-proyectos-de-reactjs/).
 
-## TODO
+### https://matiasmajul.github.io/all-store/
 
--correccion de comentarios, codigo y espacio
--actualizar version react-router V6 y corregir links
+
+##
 
 ⌨️ con ❤️ por [Matías Majul](https://github.com/matiasmajul) 😊

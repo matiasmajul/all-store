@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from "react"
+import { Link,useParams } from 'react-router-dom'
 import { ItemDetail } from "./ItemDetail"
-import { Link } from "react-router-dom";
-// FIRESTORE IMPORT
-import { collection, getDocs } from "firebase/firestore";
+
+import { collection, getDocs } from "firebase/firestore"
 import { db } from '../firebase/firebase'
+
 import styles from './styles/ItemDetailContainer.module.css'
 
 export const ItemDetailContainer = () => {
     const { productId } = useParams()
-    const [product, setProduct] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState('');
+    const [product, setProduct] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState('')
 
     useEffect(() => {
         const getProducts = async () => {
             try {
-                const { docs } = await getDocs(collection(db, "items"));
+                const { docs } = await getDocs(collection(db, "items"))
                 docs.map((doc) =>
                     doc.id === productId ?
                         setProduct({

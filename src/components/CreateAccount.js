@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import Swal from 'sweetalert2'
 
-import {  addDoc,  collection} from 'firebase/firestore';
+import { addDoc,  collection} from 'firebase/firestore';
 import { db } from '../firebase/firebase';
 
 import style from './styles/CreateAccount.module.css'
@@ -29,12 +28,14 @@ export const CreateAccount = () => {
       await addDoc(collection(db, 'users'), user)
     };
     createProduct();
+
     Swal.fire({
       icon: 'success',
       title: 'Usuario creado',
       showConfirmButton: false,
       timer: 1000
     })
+    
     navigate('/login')
   }
   

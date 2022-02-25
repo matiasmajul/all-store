@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import styles from "./styles/CartWidget.module.css";
 import { cartContext } from './CartContext';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+
+import styles from "./styles/CartWidget.module.css";
 
 export const CartWidget = () => {
     const { products, getTotalProducts, removeItem } = useContext(cartContext)
@@ -34,7 +36,6 @@ export const CartWidget = () => {
                             </div>
                             <span className={styles.delete} onClick={() => removeItem(prod.id)}>X</span>
                         </li>
-
                     ))
                     }
                     <Link className={styles.btnCart}

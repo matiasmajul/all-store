@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 import { cartContext } from './CartContext';
 import { userContext } from './UserContext';
 
 import styles from './styles/Cart.module.css'
-import Swal from 'sweetalert2'
 
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase/firebase';

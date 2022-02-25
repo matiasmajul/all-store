@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-import styles from './styles/ItemDetail.module.css'
 import { ItemCount } from './ItemCount'
 import { cartContext } from './CartContext';
+import styles from './styles/ItemDetail.module.css'
 
 
 export const ItemDetail = (product) => {
@@ -23,8 +23,9 @@ export const ItemDetail = (product) => {
                 <p className={styles.descriptionText}>{product.description}</p>
                 {
                     show ?
-                        <ItemCount initial={1} stock={product.stock} onAdd={handleAdd} /> :
-                        <Link to='/cart 'className={styles.btnComprar}>
+                        <ItemCount initial={1} stock={product.stock} onAdd={handleAdd} />
+                        :
+                        <Link to='/cart ' className={styles.btnComprar}>
                             <span>Ir al carrito</span>
                         </Link>
                 }

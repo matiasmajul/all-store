@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 
 import { ItemList } from "./ItemList"
-import  './styles/ItemListCategory.css'
 
-// FIRESTORE IMPORT
-import { collection, getDocs, query ,where} from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from '../firebase/firebase'
+
+import './styles/ItemListCategory.css'
 
 export const ItemListCategory = () => {
     const { categoryId } = useParams()
@@ -14,8 +14,8 @@ export const ItemListCategory = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const {docs} = await getDocs(query(collection(db, "items"),where("category","==",`${categoryId}`)));
-            const products = docs.map((doc)=>{
+            const { docs } = await getDocs(query(collection(db, "items"), where("category", "==", `${categoryId}`)))
+            const products = docs.map((doc) => {
                 return {
                     id: doc.id,
                     ...doc.data(),
@@ -31,6 +31,5 @@ export const ItemListCategory = () => {
         <div className="content">
             <ItemList products={products} />
         </div>
-
     )
 }

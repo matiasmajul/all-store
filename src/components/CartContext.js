@@ -15,8 +15,7 @@ export const CartProvider = ({ children }) => {
              if(id!==null)
              arrayProduct.push(product)
              else break
-             count++
-             
+             count++       
          }
          setProducts(arrayProduct)
      },[])
@@ -39,14 +38,12 @@ export const CartProvider = ({ children }) => {
         //Remover un item del cart por usando su id
         setProducts(products.filter(product=>product.id!==id))  
         localStorage.removeItem(id)
-
     }
 
     const clearProducts = () => {
         //Remover todos los items
         setProducts([])
         localStorage.clear()
-
     }
 
     const isInCart = (item) => {
@@ -62,15 +59,13 @@ export const CartProvider = ({ children }) => {
             total += product.stock
         }
         return total
-
     }
+
     const getCostoTotal = () => {
         let total = 0
         for (let product of products) {
-            //total += product.cant * product.price
             total +=  product.price*product.stock
         }
-
         return total
     }
 

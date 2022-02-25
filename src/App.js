@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer';
 import { ItemListCategory } from './components/ItemListCategory';
@@ -9,11 +10,10 @@ import { UserProvider } from './components/UserContext';
 import { Cart } from './components/Cart';
 import { Login } from './components/Login';
 import { CreateAccount } from './components/CreateAccount';
+
 import './App.css';
 
-
 const App = () => {
-
   return (
     <UserProvider>
       <CartProvider >

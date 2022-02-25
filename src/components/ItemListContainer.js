@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
-
 import { ItemList } from "./ItemList"
-import './styles/ItemListContainer.module.css';
 
-// FIRESTORE IMPORT
-import { collection, getDocs} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase/firebase'
 
+import './styles/ItemListContainer.module.css';
 
 export const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const getProducts = async () => {
-            const {docs} = await getDocs(collection(db, "items"));
-            const products = docs.map((doc)=>{
+            const { docs } = await getDocs(collection(db, "items"));
+            const products = docs.map((doc) => {
                 return {
                     id: doc.id,
                     ...doc.data(),
