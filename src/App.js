@@ -10,6 +10,7 @@ import { UserProvider } from './components/UserContext';
 import { Cart } from './components/Cart';
 import { Login } from './components/Login';
 import { CreateAccount } from './components/CreateAccount';
+import { NotFound } from './components/NotFound';
 
 import './App.css';
 
@@ -20,13 +21,13 @@ const App = () => {
         <BrowserRouter basename={'/all-store'}>
           <NavBar />
           <Routes>
-            <Route path="/cart" element={<Cart />}/>     
-            <Route path='/create' element={ <CreateAccount />}/>           
-            <Route path='/login' element={<Login />}/>
-            <Route path="/item/:productId" element={<ItemDetailContainer />}/>
-            <Route path="/:categoryId" element={<ItemListCategory/>}/>
-            <Route path="/"  element={<ItemListContainer greeting="Bienvenidos a All Store" />}/>
-            <Route path="*" element={<p>No encontrado</p>}/>
+            <Route exact path="/cart" element={<Cart />}/>     
+            <Route exact path='/create' element={ <CreateAccount />}/>           
+            <Route exact path='/login' element={<Login />}/>
+            <Route exact path="/item/:productId" element={<ItemDetailContainer />}/>
+            <Route exact path="/category/:categoryId" element={<ItemListCategory/>}/>
+            <Route exact path="/"  element={<ItemListContainer greeting="Bienvenidos a All Store" />}/>
+            <Route path="*" element={<NotFound />}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>

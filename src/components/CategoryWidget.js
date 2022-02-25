@@ -31,7 +31,7 @@ export const CategoryWidget = () => {
             <div className={`${styles.contentList} ${visible ? styles.show : null}`}
                 onMouseLeave={() => setVisible(!visible)}>
                 {categories.map((category) =>
-                (<Link to={`/${category.name}`} key={category.key}>
+                (<Link to={`categoy/${category.name}`} key={category.key}>
                     {category.name}
                 </Link>
                 ))}
