@@ -49,5 +49,6 @@ Guia para publicar proyecto con [Github Pages](https://platzi.com/tutoriales/154
 
 
 ##
+![image](https://github.com/matiasmajul/all-store/blob/04198332b7082823beb5ff2b56ba9656746f559c/All-store.gif)
 
 ⌨️ con ❤️ por [Matías Majul](https://github.com/matiasmajul) 😊
